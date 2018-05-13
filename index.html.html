@@ -2,52 +2,11 @@
 <html>
 <title></title>
 
-
-
-
 <body>
 
     <input type="text" value="Onkar K" id="name">
     <button id="add">Add</button>
     <div id = "myDiv"></div>
-
-
-<script type="text/javascript">
-
-document.getElementById("add").addEventListener("click",addElement);
-function addElement(){ 
-    var name =document.getElementById("name").value;
-    var createElement =document.createElement("div");
-    var createNode =document.createTextNode(name);
-    createElement.appendChild(createNode);
-
-    var createButton =document.createElement("button");
-    var createButtonNode =document.createTextNode("Button");
-    createButton.appendChild(createButtonNode);
-
-    createElement.appendChild(createButton);
-    
-    
-   document.getElementById("myDiv").appendChild(createElement);
-   var x = document.getElementById("myDiv").childNodes.length;
-    
-   
-   for(var i= 0; i < x; i ++){
-        document.getElementById("myDiv").childNodes[i].addEventListener("click",function(){
-        console.log(this);
-    });
-   }
-
-/*
-    document.getElementById("myDiv").childNodes[0].removeEventListener("click",function(){
-        console.log(this);
-    });
-    document.getElementById("myDiv").childNodes[0].addEventListener("click",function(){
-        console.log(this);
-    });*/
-   
-}
-</script>
 
 </body>
 </html>
